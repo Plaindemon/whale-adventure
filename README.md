@@ -16,7 +16,12 @@
 ---------------------------------------------------------------------
 ## Getting Started
 Getting Started
-You’ll need to use the MySQL2 package (Links to an external site.) to connect to your MySQL database and perform queries, the Inquirer package (Links to an external site.) to interact with the user via the command line, and the console.table package (Links to an external site.) to print MySQL rows to the console.
+
+* You’ll need to use the MySQL2 package -- install mysql2  
+
+* To connect to your MySQL database and perform queries, the Inquirer package -- npm i inquirer
+
+* To interact with the user via the command line, and the console.table package (-- npm i cosnole.table --save) to print MySQL rows to the console.
 
 Important: You will be committing a file that contains your database credentials. Make sure that your MySQL password is not used for any other personal accounts, because it will be visible on GitHub. In upcoming lessons, you will learn how to better secure this password, or you can start researching npm packages now that could help you.
 
