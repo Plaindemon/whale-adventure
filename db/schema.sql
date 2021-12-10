@@ -27,15 +27,3 @@ CREATE TABLE employee(
   FOREIGN KEY (role_id) REFERENCES department(department_id),
   manager_id INTEGER NULL
 );
-
-CREATE TABLE person (
-  person_id INT NOT NULL, 
-  PRIMARY KEY (person_id)
-);
-
-CREATE TABLE hobby (
-  hobby_id INT NOT NULL,
-  person_id INT NOT NULL,
-  PRIMARY KEY(hobby_id),
-  FOREIGN KEY(person_id) REFERENCES person(person_id)
-);

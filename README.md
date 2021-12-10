@@ -3,7 +3,7 @@
 ## Description
 
 ## Github Repository URL
-
+https://github.com/Plaindemon/whale-adventure
 ## Screenshot
 
 ## Project Walkthrough video
