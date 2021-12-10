@@ -1,15 +1,23 @@
--- INSERT INTO prices (price)
--- VALUES (1.50),
---        (2.75),
---        (5.50),
---        (10.25),
---        (15.75);
+-- INSERT INTO department (id, department_name, department_id)
+-- VALUES (1, HR, D45),
+--        (1, HR, D45),
+--        (1, HR, D45),
+--        (1, HR, D45),
+--        (1, HR, D45);
 
--- INSERT INTO books (book_name, price)
--- VALUES ("The Great Gatsby", 1),
---        ("Huckleberry Finn", 3),
+-- INSERT INTO roles (id, title, salary, department_id)
+-- VALUES (1, HR, D45),
+--        (1, HR, D45),
 --        ("100 Years of Solitude", 5),
 --        ("Things Fall Apart", 1),
 --        ("Crime and Punishment", 2),
 --        ("Moby Dick",  4),
 --        ("Decameron", 1);
+
+-- INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+-- VALUES 
+-- (1, HR, D45),
+--        (1, HR, D45),
+--        (1, HR, D45),
+--        (1, HR, D45),
+--        (1, HR, D45);

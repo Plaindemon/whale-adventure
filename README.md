@@ -21,7 +21,7 @@ Getting Started
 
 * To connect to your MySQL database and perform queries, the Inquirer package -- npm i inquirer
 
-* To interact with the user via the command line, and the console.table package (-- npm i cosnole.table --save) to print MySQL rows to the console.
+* To interact with the user via the command line, and the console.table package (-- npm i console.table --save) to print MySQL rows to the console.
 
 Important: You will be committing a file that contains your database credentials. Make sure that your MySQL password is not used for any other personal accounts, because it will be visible on GitHub. In upcoming lessons, you will learn how to better secure this password, or you can start researching npm packages now that could help you.
 
@@ -72,7 +72,7 @@ You might want to use a separate file that contains functions for performing spe
 -- Update employee managers.
 
 -- View employees by manager.
-
+ 
 -- View employees by department.
 
 -- Delete departments, roles, and employees.
