@@ -9,7 +9,7 @@ USE store_db;
 CREATE TABLE department(
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   department_name VARCHAR(30) NOT NULL,
-  department_id INTEGER NOT NULL
+  department_id INTEGER NOT NULL,
   PRIMARY KEY (department_id)
 );
 

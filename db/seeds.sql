@@ -1,58 +1,58 @@
--- INSERT INTO department (id, department_name, department_id)
--- VALUES (1, HR, D45),
---        (2, Engineering, D45),
---        (3, Sales, D45),
---        (4, Data Science, D45),
---        (5, Web Development, D45)
---        (6, Management, D45)
---        (7, Legal, D45)
---        (8, Information technology, D45)
---        (9, Finance, D45)
---        (10, Public Relations, D45);
+INSERT INTO department (id, department_name, department_id)
+VALUES (3, 'HR', 45),
+       (4, 'Engineering', 45),
+       (5, 'Sales', 45),
+       (6, 'Data Science', 45),
+       (7, 'Web Development', 45),
+       (8, 'Management', 45),
+       (9, 'Legal', 45),
+       (10, 'Information technolog', 45),
+       (9, 'Finance', 45),
+       (10, 'Public Relations', 45);
 
--- INSERT INTO roles (id, title, salary)
--- VALUES (1, HR Team Lead, 60000),
---        (2, International Data Supervisor, 76000),
---        (3, Direct Solutions Manager, 56000),
---        (4, Forward Program Associate, 40000),
---        (5, Dynamic Data Producer, 55600),
---        (6, Interactive Team Orchestrator,  44576),
---        (7, Product Integration, 135894)
---        (8, Corporate Intranet Engineer, 290000)
---        (9, Product Integration, 4654753)
---        (10, Relational Applications Manager, 156878)
---        (11, District Applications Executive, 156886)
---        (12, Relational Identity Planner, 75678)
---        (13, Direct Quality Administrator, 34657)
---        (14, Forward Directives Facilitator, 476865)
---        (15, Internal Resonance Coordinator, 65756)
---        (16, Direct Quality Manager, 788678)
---        (17, Interactive Team Designer, 135894)
---        (18, Investor Mobility Associate, 135894)
---        (19, Regional Intranet Analyst, 135894)
---        (20, Internal Response Assistant, 135894)
---        (21, Dynamic Interactions Officer, 135894)
---        (22, International Ideation Director, 135894)
---        (23, International Web Designer, 135894)
---        (24, Global Operations Analyst, 135894)
---        (25, Principal Ideation Engineer, 1358934);
+INSERT INTO roles (id, title, salary)
+VALUES (1, 'HR Team Lead', 60000),
+       (2, 'International Data Supervisor', 76000),
+       (3, 'Direct Solutions Manager', 56000),
+       (4, 'Forward Program Associate', 40000),
+       (5, 'Dynamic Data Producer', 55600),
+       (6, 'Interactive Team Orchestrator',  44576),
+       (7, 'Product Integration', 135894),
+       (8, 'Corporate Intranet Engineer', 290000),
+       (9, 'Product Integration', 4654753),
+       (10, 'Relational Applications Manager', 156878),
+       (11, 'District Applications Executive', 156886),
+       (12, 'Relational Identity Planner', 75678),
+       (13, 'Direct Quality Administrator', 34657),
+       (14, 'Forward Directives Facilitator', 476865),
+       (15, 'Internal Resonance Coordinator', 65756),
+       (16, 'Direct Quality Manager', 788678),
+       (17, 'Interactive Team Designer', 135894),
+       (18, 'Investor Mobility Associate', 135894),
+       (19, 'Regional Intranet Analyst', 135894),
+       (20, 'Internal Response Assistant', 135894),
+       (21, 'Dynamic Interactions Officer', 135894),
+       (22, 'International Ideation Director', 135894),
+       (23, 'International Web Designer', 135894),
+       (24, 'Global Operations Analyst', 135894),
+       (25, 'Principal Ideation Engineer', 1358934);
 
--- INSERT INTO employee (id, first_name, last_name, manager_id)
--- VALUES 
--- (1, 'Bryanna', 'Margie', 1),
--- (2, 'Indiana', 'Frankie', 1),
--- (3, 'Ronnie', 'Leighton', 1),
--- (4, 'Bryanna', 'Margie', 1),
--- (5, 'Franny', 'Dale', 1),
--- (6, 'Evelyn', 'Shelly', 1),
--- (7, 'Teddie', 'Val', 1),
--- (8, 'Lavern', 'Terry', 1),
--- (9, 'Esme', 'Toby', 1),
--- (10, 'Jayme', 'Hildred', 1),
--- (11, 'Arden', 'Emery', 1),
--- (12, 'Jules', 'Lennie', 1),
--- (13, 'Jools', 'Quinn', 1),
--- (14, 'Blair', 'Gerry', 1),
--- (15, 'Beau', 'Mags', 1),
--- (16, 'Hill', 'Pine', 1);
+INSERT INTO employee (id, first_name, last_name, manager_id)
+VALUES 
+(1, 'Bryanna', 'Margie', 1),
+(2, 'Indiana', 'Frankie', 1),
+(3, 'Ronnie', 'Leighton', 1),
+(4, 'Bryanna', 'Margie', 1),
+(5, 'Franny', 'Dale', 1),
+(6, 'Evelyn', 'Shelly', 1),
+(7, 'Teddie', 'Val', 1),
+(8, 'Lavern', 'Terry', 1),
+(9, 'Esme', 'Toby', 1),
+(10, 'Jayme', 'Hildred', 1),
+(11, 'Arden', 'Emery', 1),
+(12, 'Jules', 'Lennie', 1),
+(13, 'Jools', 'Quinn', 1),
+(14, 'Blair', 'Gerry', 1),
+(15, 'Beau', 'Mags', 1),
+(16, 'Hill', 'Pine', 1);
   
