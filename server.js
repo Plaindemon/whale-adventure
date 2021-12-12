@@ -23,20 +23,22 @@ const db = mysql.createConnection(
 );
 
 // Query database
-// let deletedRow = 2;
-
-// db.query(`DELETE FROM books WHERE id = ?` (err, result) => {
-//   if (err) {
-//     console.log(err);
-//   }
-//   console.log(result);
-// });
-
+db.query(`SELECT * FROM department`, (err, rows) => {
+  console.log(rows);
+});
 // Query database
-// db.query('SELECT * FROM books', function (err, results) {
-//   console.log(results);
-// });
-
+db.query(`SELECT * FROM roles`, (err, rows) => {
+  console.log(rows);
+});
+// Query database
+db.query(`SELECT * FROM employee`, (err, rows) => {
+  console.log(rows);
+});
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Hello World'
+  });
+});
 // Default response for any other request (Not Found)
 app.use((req, res) => {
   res.status(404).end();
