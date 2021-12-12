@@ -8,22 +8,22 @@ USE store_db;
 -- A table is composed of rows and columns. A column represents a field. A row represents a record.
 CREATE TABLE department(
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  department_name VARCHAR(30) NOT NULL,
-  department_id INTEGER NOT NULL,
-  PRIMARY KEY (department_id)
+  department_name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE roles(
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(30) NOT NULL,
   salary DECIMAL(14,2) NOT NULL,
-  FOREIGN KEY (role_id) REFERENCES department(department_id)
+  role_id INTEGER NOT NULL,
+  FOREIGN KEY (role_id) REFERENCES department(id)
 );
 
 CREATE TABLE employee(
   id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
-  FOREIGN KEY (role_id) REFERENCES department(department_id),
+  role_id INTEGER NOT NULL,
+  FOREIGN KEY (role_id) REFERENCES roles(id),
   manager_id INTEGER NULL
 );

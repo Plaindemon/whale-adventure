@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Plaindemon/whale-adventure/issues"
   },
-  "homepage": "https://github.com/Plaindemon/whale-adventure#readme"
+  "homepage": "https://github.com/Plaindemon/whale-adventure#readme",
+  "devDependencies": {
+    "jest": "^27.4.4"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }
