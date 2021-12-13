@@ -1,8 +1,8 @@
 
 const fs = require('fs');
 // const util = require("util");
-const generateMarkdown = require('./generateMarkdown');
 var inquirer = require('inquirer');
+const Connection = require('mysql/lib/Connection');
 
 var commandLineArgs = process.argv;
 console.log(commandLineArgs);
@@ -39,16 +39,26 @@ const rolesQuestions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?',
+        message: 'What is the employees job title?',
+    },
+    {
+      type: 'input',
+      name: 'salary',
+      message: 'What is the salary of your employee?',
     }
 ];
 
 const employeeQuestions = [
     {
         type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
-    }
+        name: 'first_name',
+        message: 'What is the first name of your employee?',
+    },
+    {
+      type: 'input',
+      name: 'last_name',
+      message: 'What is the last name of your employee?',
+  },
 ]
 
 
@@ -58,19 +68,20 @@ const employeeQuestions = [
 
 const promptUser = () => {
     console.log(`
-    =================
-        TEXT HERE 
-    =================
+    ==================
+     EMPLOYEE TRACKER
+    ==================
     `);
     return inquirer
-    .prompt(departmentQuestions)
-      .then((answers) => {
-          // Use user feedback for... whatever!!
-        //   const pageInfo = generateMarkdown(answers);
-  
+    .prompt(employeeManager)
+      .then(function(answers){
+      // Use user feedback for... whatever!!
+      if(answers.begin === 'View All Employees'){
+      // connection.query("SELECT * FROM department")
+      console.log("view all employees is success")
+      } else
           console.log((answers));
           console.table((answers));
-        //   console.log(pageInfo);
   
       })
   }
