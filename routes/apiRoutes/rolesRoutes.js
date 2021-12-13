@@ -4,7 +4,7 @@ const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
 // Get all roles
-app.get('/api/roles', (req, res) => {
+router.get('/roles', (req, res) => {
     // // Query database table roles
     db.query(`SELECT * FROM roles`, (err, rows) => {
       if (err) { 
@@ -19,7 +19,7 @@ app.get('/api/roles', (req, res) => {
   })
 
 // GET single role 
-app.get('/api/roles/:id', (req, res) => {
+router.get('/roles/:id', (req, res) => {
     const sql = `SELECT * FROM roles WHERE id = ?`;
     const params = [req.params.id];
     db.query(sql, params, (err, rows) => {
@@ -35,7 +35,7 @@ app.get('/api/roles/:id', (req, res) => {
   }) 
 
 // Create a single role
-app.post('/api/roles', ({ body}, res) => {
+router.post('/roles', ({ body}, res) => {
     const errors = inputCheck(body, 'id', 'title', 'salary', 'role_id', 'department_id');
     if (errors) {
       res.status(400).json({ error: errors });
@@ -59,7 +59,7 @@ app.post('/api/roles', ({ body}, res) => {
   })
 
 // Update a role
-app.put('/api/roles/:id', (req, res) => {
+router.put('/roles/:id', (req, res) => {
     const errors = inputCheck(req.body, 'title');
   
     if (errors) {
@@ -88,7 +88,7 @@ app.put('/api/roles/:id', (req, res) => {
   });
 
 // Delete a single role
-app.delete('/api/roles', (req, res) => {
+router.delete('/roles', (req, res) => {
     const sql = `DELETE FROM roles WHERE id = ?`;
     const params = [req.params.id];
   

@@ -4,7 +4,7 @@ const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
 // Get all Employees
-app.get('/api/employee', (req, res) => {
+router.get('/employee', (req, res) => {
     // Query database table employee
     db.query(`SELECT * FROM employee`, (err, rows) => {
       if (err) { 
@@ -19,7 +19,7 @@ app.get('/api/employee', (req, res) => {
   })
   
   // GET single employee 
-  app.get('/api/employee/:id', (req, res) => {
+router.get('/employee/:id', (req, res) => {
     const sql = `SELECT * FROM employee WHERE id = ?`;
     const params = [req.params.id];
     db.query(sql, params, (err, row) => {
@@ -35,7 +35,7 @@ app.get('/api/employee', (req, res) => {
   });
   
   // create a single employee
-  app.post('/api/employee', ({body}, res) => {
+router.post('/employee', ({body}, res) => {
     const errors = inputCheck(body, 'id', 'title', 'salary', 'role_id', 'department_id');
     if (errors) {
       res.status(400).json({ error: errors });
@@ -60,7 +60,7 @@ app.get('/api/employee', (req, res) => {
   })
   
   // update an employee
-  app.put('/api/employee/:id', (req, res) => {
+router.put('/employee/:id', (req, res) => {
     const errors = inputCheck(req.body, 'first_name', 'last_name');
   
     if (errors) {
@@ -89,7 +89,7 @@ app.get('/api/employee', (req, res) => {
 });
   
 // Delete a single employee
-app.delete('/api/employee', (req, res) => {
+router.delete('/employee', (req, res) => {
     const sql = `DELETE FROM employee WHERE id = ?`;
     const params = [req.params.id];
   
