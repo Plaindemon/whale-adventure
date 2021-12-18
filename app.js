@@ -1,4 +1,5 @@
 
+const { Console } = require('console');
 const fs = require('fs');
 // const util = require("util");
 var inquirer = require('inquirer');
@@ -9,7 +10,6 @@ console.log(commandLineArgs);
 
 
 // TODO: Create an array of questions for user input
-
 const employeeManager = [
     { 
         type: 'list',
@@ -79,7 +79,44 @@ const promptUser = () => {
       if(answers.begin === 'View All Employees'){
       // connection.query("SELECT * FROM department")
       console.log("view all employees is success")
-      } else
+      // console.log()
+      } 
+      else if (answers.begin === 'Add Employee'){
+        // console.log("Add employee is success")
+        inquirer.prompt(employeeQuestions)
+        .then(function(answers){
+          console.log(answers.first_name)
+        })
+      }
+      else if (answers.begin === 'Update Employee Role'){
+        console.log("Update Employee Role is success")
+      }
+      else if (answers.begin === 'View All Roles'){
+        console.log("View All Roles is success")
+      }
+      else if (answers.begin === 'Add Role'){
+        inquirer.prompt(rolesQuestions)
+        .then(function(answers){
+          console.log(answers.title)
+          console.log(answers.salary)
+        })
+        console.log("Add Role is success")
+      }
+      else if (answers.begin === 'View All Departments'){
+        console.log("View All Departments is success")
+      }
+      else if (answers.begin === 'Add Departments'){
+        inquirer.prompt(departmentQuestions)
+        .then(function(answers){
+          console.log(answers.department.name)
+          console.log(answers.department_id)
+        })
+        console.log("Add Departments is success")
+      }
+      else if (answers.begin === 'View All'){
+        console.log("View All is success")
+      }
+      else
           console.log((answers));
           console.table((answers));
   
